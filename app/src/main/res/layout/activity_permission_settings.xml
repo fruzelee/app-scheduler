@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/vWelcome"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0"
+        android:background="@color/black"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/menu_item_padding">
+
+            <ImageView
+                android:id="@+id/iWelcomeIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:contentDescription="@string/image"
+                android:gravity="center_vertical"
+                android:padding="@dimen/menu_item_padding"
+                android:src="@mipmap/ic_launch_white_48dp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/menu_item_padding">
+
+                <TextView
+                    android:id="@+id/tWelcomeTitle"
+                    style="@style/GenericWhiteTextViewTitleStyle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/notification_module_padding_small"
+                    android:text="@string/no_data"
+                    android:textSize="18.0sp" />
+
+                <TextView
+                    android:id="@+id/tWelcomeMessage"
+                    style="@style/GenericWhiteTextViewSubTitleStyle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/notification_module_padding_small"
+                    android:text="@string/no_data"
+                    android:textSize="16.0sp" />
+
+                <TextView
+                    android:id="@+id/tWelcomeSuggestion"
+                    style="@style/GenericWhiteTextViewSubTitleStyle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/notification_module_padding_small"
+                    android:text="@string/no_data"
+                    android:textSize="14.0sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/vWelcomeAction"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white_standard_drawable"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:padding="8.0dip">
+
+        <RelativeLayout
+            android:layout_width="@dimen/header_circle_radius_large"
+            android:layout_height="@dimen/header_circle_radius_large"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical"
+            android:padding="8.0dip">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/image"
+                android:src="@mipmap/ic_launcher" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.0"
+            android:orientation="vertical"
+            android:padding="8.0dip">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="@string/app_name"
+                android:textColor="@color/blue_grey_900"
+                android:textSize="18.0sp" />
+
+            <TextView
+                android:id="@+id/tWelcomeAction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="@string/enable_permission_action"
+                android:textColor="@color/blue_grey_500"
+                android:textSize="18.0sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iWelcomeActionIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@string/image"
+            android:padding="16.0dip"
+            android:src="@mipmap/ic_touch_app_black_36dp" />
+    </LinearLayout>
+
+</LinearLayout>

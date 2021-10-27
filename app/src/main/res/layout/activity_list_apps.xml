@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@id/tTopBar"
+        android:layout_width="fill_parent"
+        android:layout_height="?actionBarSize"
+        android:background="?colorPrimary"
+        android:elevation="4.0dip"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0">
+
+        <ScrollView
+            android:id="@+id/lEmptyListApps"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tEmptyListApps"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4.0dip"
+                    android:gravity="center"
+                    android:text="@string/no_results"
+                    android:textAppearance="?android:textAppearance"
+                    android:textColor="@color/blue_grey_300" />
+            </LinearLayout>
+        </ScrollView>
+
+        <ListView
+            android:id="@+id/lApps"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:dividerHeight="0.5dip" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:padding="6.0dip">
+
+        <AutoCompleteTextView
+            android:id="@+id/eSetText"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="6.0dip"
+            android:layout_marginRight="6.0dip"
+            android:layout_weight="1.0"
+            android:hint="@string/search"
+            android:inputType="textMultiLine"
+            android:maxLines="3"
+            android:textSize="16.0sp" />
+
+        <ImageButton
+            android:id="@+id/bCancelText"
+            android:layout_width="@dimen/header_circle_radius"
+            android:layout_height="@dimen/header_circle_radius"
+            android:layout_gravity="bottom"
+            android:contentDescription="@string/image"
+            android:background="@drawable/transparent_circle_drawable"
+            android:src="@mipmap/ic_cancel_black_24dp" />
+
+        <ImageButton
+            android:id="@+id/bSearchApp"
+            android:layout_width="@dimen/header_circle_radius"
+            android:layout_height="@dimen/header_circle_radius"
+            android:contentDescription="@string/image"
+            android:layout_gravity="bottom"
+            android:background="@drawable/blue_500_circle_drawable"
+            android:src="@mipmap/ic_search_white_24dp" />
+    </LinearLayout>
+</LinearLayout>

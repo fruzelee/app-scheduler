@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false"
+    android:orientation="horizontal"
+    android:padding="8.0dip">
+
+    <RelativeLayout
+        android:layout_width="@dimen/header_circle_radius_large"
+        android:layout_height="@dimen/header_circle_radius_large"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="8.0dip">
+
+        <ImageView
+            android:id="@+id/iIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/image"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/ic_block_black_48dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1.0"
+        android:orientation="vertical"
+        android:padding="6.0dip">
+
+        <TextView
+            android:id="@+id/tName"
+            style="@style/StandardTextViewTitleStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/tText"
+            style="@style/GenericGreyTextView3rdLevelStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tDescription"
+            style="@style/GenericGreyTextView3rdLevelStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="3" />
+
+        <TextView
+            android:id="@+id/tScheduling"
+            style="@style/GenericGreyTextViewSubTitleStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@id/lInterval"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/image"
+                android:src="@mipmap/ic_repeat_black_18dp" />
+
+            <TextView
+                android:id="@+id/tInterval"
+                style="@style/GenericGreyTextViewSubTitleStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="5.0dip"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/bScheduling"
+        android:layout_width="@dimen/header_circle_radius_medium"
+        android:layout_height="@dimen/header_circle_radius_medium"
+        android:layout_gravity="center_vertical"
+        android:contentDescription="@string/image"
+        android:layout_margin="8.0dip"
+        android:background="@drawable/pink_500_circle_drawable"
+        android:focusable="false"
+        android:src="@mipmap/ic_access_time_white_18dp" />
+</LinearLayout>
