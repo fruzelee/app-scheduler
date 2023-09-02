@@ -14,7 +14,7 @@ device to start at a specific time.
 - Used Android Studio to create the project.
 - Target Sdk is Android 11.
 - Kotlin is used as code in to the app.
-- Used standard Human Interface Guidelines to design the app.
+- Used standard User Interface Guidelines to design the app.
 - Avoid third-party libraries.
 
 # Features
